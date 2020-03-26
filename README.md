@@ -20,14 +20,16 @@ ProxyJump appuser@bastion
 User appuser
 AddKeysToAgent yes
 IdentityFile ~/.ssh/appuser
+```
 ## ip gcp virtualhost
 
+```bash
 bastion_IP = 34.90.137.138
 someinternalhost_IP = 10.164.0.7
 ```
 
-
 ## Home work № 4
+
 ```bash
 testapp_IP = 34.91.217.122
 testapp_port = 9292
