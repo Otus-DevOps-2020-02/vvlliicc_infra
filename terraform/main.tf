@@ -1,6 +1,10 @@
 terraform {
   # Версия terraform
+<<<<<<< HEAD
   required_version = "0.12"
+=======
+  required_version = "0.12.8"
+>>>>>>> dcca6eca2b35aa19cfed30f60699e10f41254842
 }
 
 provider "google" {
@@ -10,20 +14,6 @@ provider "google" {
   # ID проекта
   project = var.project
   region  = var.region
-}
-resource "google_compute_firewall" "firewall_puma" {
-  name = "allow-puma-default"
-  # Название сети, в которой действует правило
-  network = "default"
-  # Какой доступ разрешить
-  allow {
-    protocol = "tcp"
-    ports    = ["9292"]
-  }
-  # Каким адресам разрешаем доступ
-  source_ranges = ["0.0.0.0/0"]
-  # Правило применимо для инстансов с перечисленными тэгами
-  target_tags = ["reddit-app"]
 }
 
 resource "google_compute_instance" "app" {
@@ -66,5 +56,19 @@ resource "google_compute_instance" "app" {
   }
 
 
+}
+ resource "google_compute_firewall" "firewall_puma" {
+  name = "allow-puma-default"
+  # Название сети, в которой действует правило
+  network = "default"
+  # Какой доступ разрешить
+  allow {
+    protocol = "tcp"
+    ports    = ["9292"]
+  }
+  # Каким адресам разрешаем доступ
+  source_ranges = ["0.0.0.0/0"]
+  # Правило применимо для инстансов с перечисленными тэгами
+  target_tags = ["reddit-app"]
 }
 
