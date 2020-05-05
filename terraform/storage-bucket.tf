@@ -1,5 +1,5 @@
 provider "google" {
-  version = "~> 0.12.19"
+  version = "~> 2.15"
   project = var.project
   region  = var.region
 }
@@ -10,6 +10,7 @@ module "storage-bucket" {
 
   # Имя поменяйте на другое
   name = "storage-test"
+  location = var.region
 }
 
 output storage-bucket_url {
