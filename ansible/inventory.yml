@@ -3,9 +3,9 @@ all:
   children:
     webservers:
       hosts:
-        35.204.101.203
+        35.204.25.188
     dbservers:
       hosts:
-        35.204.223.29
+        35.204.30.68
 
 
