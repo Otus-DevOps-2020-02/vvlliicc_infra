@@ -4,7 +4,7 @@ terraform {
 }
 
 provider "google" {
-#  credentials = file("/home/viktor/Downloads/Infra-cd90ef55c6e7.json")
+  credentials = file("/home/viktor/Downloads/Infra-cd90ef55c6e7.json")
   # Версия провайдера
   version = "2.15"
   # ID проекта
