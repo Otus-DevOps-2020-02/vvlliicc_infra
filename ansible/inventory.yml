@@ -1,11 +1,9 @@
 all:
   hosts:
   children:
-    webservers:
+    app:
       hosts:
         35.204.25.188
-    dbservers:
+    db:
       hosts:
         35.204.30.68
-
-

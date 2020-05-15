@@ -4,9 +4,9 @@
     mongo_bind_ip: 0.0.0.0
   tasks: 
     - name: Chenge mongo config file
-      bacome: true
-      teamplate:
-        src: teamplate/mongo.conf.j2
+      become: true
+      template:
+        src: templates/mongod.conf.j2
         dest: /etc/mongod.conf
         mode: 0644
       tags: db-tag
