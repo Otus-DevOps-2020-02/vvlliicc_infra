@@ -9,7 +9,7 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `project_id`}}",
-            "image_name": "reddit-db-base",
+            "image_name": "reddit-db-base1",
             "image_family": "reddit-base",
             "source_image_family": "{{user `source_image_family`}}",
             "zone": "europe-west1-b",
@@ -24,7 +24,7 @@
     "provisioners": [
         {
         "type": "ansible",
-        "playbook_file": "ansible/packer_db.yml"
+        "playbook_file": "../ansible/packer_db.yml"
         }
     ]
         
