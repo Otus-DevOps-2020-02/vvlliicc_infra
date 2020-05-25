@@ -12,4 +12,3 @@ variable zone {
   # Значение по умолчанию
   default = "europe-west4-a"
 }
-

@@ -30,4 +30,3 @@
       service:
         name: mongod
         enabled: yes
-        
