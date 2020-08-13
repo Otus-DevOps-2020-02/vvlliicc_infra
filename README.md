@@ -1,4 +1,3 @@
-
 1. Подключение к someinternalhost в одну команду
 ```bash
 ssh -i ~/.ssh/appuser -J 34.90.137.138 10.164.0.7
