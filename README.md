@@ -28,3 +28,4 @@ IdentityFile ~/.ssh/appuser
 bastion_IP = 35.214.142.159
 
 someinternalhost_IP = 10.164.15.206
+
