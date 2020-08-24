@@ -21,11 +21,10 @@ HostName 10.164.0.7
 ProxyJump appuser@bastion
 User appuser
 AddKeysToAgent yes
+
 IdentityFile ~/.ssh/appuser
 
 ```
 3.
 bastion_IP = 35.214.142.159
 someinternalhost_IP = 10.164.15.206
-
-
