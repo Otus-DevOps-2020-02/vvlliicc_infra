@@ -1,8 +1,13 @@
----
-- name: Install ruby
+- name: Configure App in packer
   hosts: all
   become: true
   tasks:
+    - name: Install packages
+      apt: "name={{ item }} state=present"
+      with_items:
+        - ruby-full
+        - ruby-bundler
+        - build-essential
     - name: apt-get update
       apt:
         update_cache: yes
@@ -13,3 +18,4 @@
           - ruby-full
           - ruby-bundler
           - build-essential
+
