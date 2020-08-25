@@ -8,3 +8,14 @@
         - ruby-full
         - ruby-bundler
         - build-essential
+    - name: apt-get update
+      apt:
+        update_cache: yes
+
+    - name: Install ruby packages
+      apt:
+        pkg:
+          - ruby-full
+          - ruby-bundler
+          - build-essential
+

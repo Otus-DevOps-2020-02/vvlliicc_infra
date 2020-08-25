@@ -58,8 +58,9 @@
     - name: Bundle install
       bundler:
         state: present
-        chdir: /home/appuser/reddit
+        chdir: /home/appuser/reddit 
   handlers:
   - name: reload puma
     become: true
     systemd: name=puma state=restarted
+

@@ -4,12 +4,12 @@ terraform {
 }
 
 provider "google" {
-#  credentials = file("/home/viktor/Downloads/Infra-39d53002ed4b.json")
+#  credentials = file("/home/viktor/Downloads/Infra-cd90ef55c6e7.json")
   # Версия провайдера
   version = "2.15"
   # ID проекта
   project = var.project
-  region  = var.zone
+  region  = var.region
 }
 module "app" {
   source          = "../modules/app"
@@ -27,4 +27,3 @@ module "vpc" {
   source        = "../modules/vpc"
   source_ranges = ["0.0.0.0/0"]
 }
-
