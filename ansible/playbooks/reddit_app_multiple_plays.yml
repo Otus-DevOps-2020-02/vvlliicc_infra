@@ -1,3 +1,4 @@
+---
 - name: Configure MongoDB
   hosts: db
   tags: db-tag
@@ -35,12 +36,12 @@
         dest: /home/appuser/db_config
         owner: appuser
         group: appuser
+
     - name: enable puma
       systemd: name=puma enabled=yes
 
   handlers:
   - name: reload puma
-    become: true
     systemd: name=puma state=restarted
 
 - name: Deploy app
@@ -62,3 +63,4 @@
   - name: reload puma
     become: true
     systemd: name=puma state=restarted
+
